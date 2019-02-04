@@ -135,7 +135,7 @@ static AD9361_InitParam_t s_ad_default_param = {
         18000000,//rf_rx_bandwidth_hz *** adi,rf-rx-bandwidth-hz
         18000000,//rf_tx_bandwidth_hz *** adi,rf-tx-bandwidth-hz
         /* RF Port Control */
-        0,		//rx_rf_port_input_select *** adi,rx-rf-port-input-select
+        1,		//rx_rf_port_input_select *** adi,rx-rf-port-input-select
         0,		//tx_rf_port_input_select *** adi,tx-rf-port-input-select
         /* TX Attenuation Control */
         10000,	//tx_attenuation_mdB *** adi,tx-attenuation-mdB
