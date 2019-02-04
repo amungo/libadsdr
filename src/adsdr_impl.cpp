@@ -576,14 +576,14 @@ int ADSDR_impl::fill_tx_transfer(libusb_transfer* transfer)
 void ADSDR_impl::decode_rx_transfer(unsigned char *buffer, int actual_length, std::vector<sample> &destination)
 {
     int16_t* pSamplesIn = (short*)buffer;
-    int lenght = actual_length / (sizeof(short) * 2 * 2);
+    int lenght = actual_length / (sizeof(short) * 2);
     destination.resize(lenght);
     sample* pSamplesOut = destination.data();
 
     for(int i = 0; i < lenght; i++)
     {
-        pSamplesOut[i].i = pSamplesIn[4*i+0]>>4;
-        pSamplesOut[i].q = pSamplesIn[4*i+1]>>4;
+        pSamplesOut[i].i = pSamplesIn[2*i+0]>>4;
+        pSamplesOut[i].q = pSamplesIn[2*i+1]>>4;
     }
 }
 
