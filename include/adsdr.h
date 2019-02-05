@@ -6,8 +6,6 @@ extern "C" {
 #endif
 
 #include "adsdr_export.h"
-#include "adsdr.h"
-
 
 #define ADSDR_USB_TIMEOUT 2000
 
